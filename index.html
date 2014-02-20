@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Emerald Ash Borer - Willy Wu - Enviro Invasive Species</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		<div id="firefox">Works best in Mozilla Firefox</div>
+		<section id="scene" class="notclose defocusfront focusback">
+			<img id="backdrop" src="Backdrop.png"/>
+			<img id="backdropb" src="Backdrop Blur.png"/>
+			<img class="info" id="importance" src="Importance.png"/>
+			<img class="info" id="currentstatus" src="Current Status.png"/>
+			<img id="foregroundb" src="Foreground Blur.png"/>
+			<img id="foreground" src="Foreground.png"/>
+			<img class="info" id="originspread" src="Origin and Spread.png"/>
+			<img class="info" id="lifecycle" src="Life Cycle.png"/>
+			<img id="scale" src="Scale.png"/>
+			<img id="title" src="Title.png"/>
+		</section>
+		<script src="leap.js"></script>
+		<!-- http://js.leapmotion.com/0.4.0/leap.js -->
+		<script>
+			var scene = document.getElementById("scene");
+			var scale = document.getElementById("scale");
+			var lifecycle = document.getElementById("lifecycle");
+			var originspread = document.getElementById("originspread");
+			var foreground = document.getElementById("foreground");
+			var currentstatus = document.getElementById("currentstatus");
+			var importance = document.getElementById("importance");
+			var backdrop = document.getElementById("backdrop");
+			var title = document.getElementById("title");
+			var scenePos = [0, 1, -1];
+			var sceneDefault = [0, -0.8, -1];
+			var sceneTarget = [0, -0.8, -1]
+			var returnToDefault = true;
+			var blend = 1;
+			var controller = new Leap.Controller();
+			var low = true;
+			var focused = 0;
+			var mouseLastMoved = false;
+			function clamp(n, min, max) {
+				return Math.min(Math.max(n, min), max);
+			}
+
+			function updateFrame() {
+				if (returnToDefault) {
+					blend = 1;
+					scenePos[0] = 0.95 * scenePos[0] + 0.05 * sceneDefault[0];
+					scenePos[1] = 0.95 * scenePos[1] + 0.05 * sceneDefault[1];
+					scenePos[2] = 0.95 * scenePos[2] + 0.05 * sceneDefault[2];
+				} else {
+					blend = Math.max(blend - 0.01, 0);
+					scenePos[0] = scenePos[0] * blend + sceneTarget[0] * (1 - blend);
+					scenePos[1] = scenePos[1] * blend + sceneTarget[1] * (1 - blend);
+					scenePos[2] = scenePos[2] * blend + sceneTarget[2] * (1 - blend);
+				}
+				scene.style.transform = "translate3D(" + (-400 * clamp(scenePos[0], -1, 1)) + "px," + 500 * (clamp(scenePos[1], -1, 1)) + "px," + 300 * (clamp(scenePos[2], -1, 1) + 0.4) + "px)";
+				var changed = false;
+				if (scenePos[1] > -0.2 && low && focused == 0) {
+					low = false;
+					changed = true;
+				}
+				if (scenePos[1] < -0.6 && !low && focused == 0) {
+					low = true;
+					changed = true;
+				}
+				if (scenePos[1] < 0 && !low && focused != 0) {
+					low = true;
+					changed = true;
+				}
+				if (scenePos[1] > 0 && low && focused != 0) {
+					low = false;
+					changed = true;
+				}
+				if (scenePos[0] > 0.4 && focused !== 1) {
+					focused = 1;
+					changed = true;
+				}
+				if (scenePos[0] < 0.4 && focused != -1) {
+					focused = -1;
+					changed = true;
+				}
+				if (Math.abs(scenePos[0]) < 0.4 && focused != 0) {
+					focused = 0;
+					changed = true;
+				}
+				if (changed) {
+					if (focused == 0) {
+						if (low) {
+							scene.classList.remove("defocusfront");
+							scene.classList.remove("focusback");
+						} else {
+							scene.classList.add("defocusfront");
+							scene.classList.add("focusback");
+						}
+					} else {
+						scene.classList.add("defocusfront");
+						scene.classList.remove("focusback");
+					}
+					if (focused < 0 && low) {
+						lifecycle.classList.add("focused");
+					} else {
+						lifecycle.classList.remove("focused");
+					}
+					if (focused > 0 && low) {
+						originspread.classList.add("focused");
+					} else {
+						originspread.classList.remove("focused");
+					}
+					if (focused < 0 && !low) {
+						currentstatus.classList.add("focused");
+					} else {
+						currentstatus.classList.remove("focused");
+					}
+					if (focused > 0 && !low) {
+						importance.classList.add("focused");
+					} else {
+						importance.classList.remove("focused");
+					}
+					if (focused == 0 && low) {
+						scene.classList.remove("notclose");
+						scene.classList.remove("notclose");
+					} else {
+						scene.classList.add("notclose");
+						scene.classList.add("notclose");
+					}
+				}
+				window.mozRequestAnimationFrame(updateFrame);
+			}
+
+
+			document.body.onload = function() {
+				document.getElementById("firefox").style.display="none";
+				updateFrame();
+			}
+			window.addEventListener("mousemove", function(event) {
+				sceneTarget[0] = 2 * event.pageX / window.innerWidth - 1;
+				sceneTarget[1] = -2 * event.pageY / window.innerHeight + 1;
+				sceneTarget[2] = -1;
+				returnToDefault = false;
+				if (!mouseLastMoved) {
+					blend = 1;
+					mouseLastMoved = true;
+				}
+			})
+			window.addEventListener("mouseout",function(event){
+				returnToDefault=true;
+			})
+			controller.on("connect", function() {
+				console.log("Connected!");
+			});
+			controller.on("deviceConnected", function() {
+				console.log("Device connected!");
+			});
+			controller.on("deviceDisconnected", function() {
+				console.log("Device disconnected!");
+			});
+			controller.on("frame", function(frame) {
+				if (frame.hands.length) {
+					if ((frame.fingers.length > 1 || frame.tools.length > 0)) {
+						if (mouseLastMoved) {
+							blend = 1;
+							mouseLastMoved = false;
+						}
+						sceneTarget[0] = 3 * (frame.hands[0].stabilizedPalmPosition[0] - frame.interactionBox.center[0]) / frame.interactionBox.width;
+						sceneTarget[1] = 3 * (frame.hands[0].stabilizedPalmPosition[1] - frame.interactionBox.center[1]) / frame.interactionBox.height;
+						sceneTarget[2] = -0.2 - 2 * (frame.hands[0].palmPosition[2] - frame.interactionBox.center[2]) / frame.interactionBox.depth;
+						returnToDefault = false;
+					} else {
+						returnToDefault = true;
+					}
+				}
+			});
+
+			controller.connect();
+
+		</script>
+	</body>
+</html>

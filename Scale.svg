@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="80"
+   id="svg3096"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Scale.svg"
+   inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\Scale.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3098" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="406.13186"
+     inkscape:cy="83.221161"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3104"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3101">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-972.3622)">
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 9,974.23772 0,29.64238"
+       id="path3106"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       xml:space="preserve"
+       style="font-size:84px;font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Roboto;-inkscape-font-specification:Roboto Ultra-Light"
+       x="210"
+       y="1048.3622"
+       id="text3092"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3094"
+         x="210"
+         y="1048.3622"
+         style="font-size:44px;font-style:oblique;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto Light Oblique">1 cm</tspan></text>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3106"
+       id="use3020"
+       transform="translate(484.97519,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path3106"
+       id="use3022"
+       transform="matrix(1,0,0,0.58804774,44.088654,414.0522)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2.60809678;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3022"
+       id="use3024"
+       transform="translate(44.088653,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3024"
+       id="use3026"
+       transform="translate(44.088658,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3026"
+       id="use3028"
+       transform="translate(44.08865,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3028"
+       id="use3030"
+       transform="translate(44.088647,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3030"
+       id="use3032"
+       transform="translate(44.088665,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3032"
+       id="use3034"
+       transform="translate(44.088636,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3034"
+       id="use3036"
+       transform="translate(44.088669,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3036"
+       id="use3038"
+       transform="translate(44.088661,0)"
+       width="600"
+       height="80"
+       inkscape:export-filename="C:\Users\William\Documents\2013\EnviroInvasiveSpecies\use3040.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3038"
+       id="use3040"
+       transform="translate(44.088641,0)"
+       width="600"
+       height="80"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3022"
+       id="use3042"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3024"
+       id="use3044"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3026"
+       id="use3046"
+       transform="matrix(1,0,0,0.58124656,-22.044334,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3028"
+       id="use3048"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3030"
+       id="use3050"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3032"
+       id="use3052"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3034"
+       id="use3054"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3036"
+       id="use3056"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3038"
+       id="use3058"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3040"
+       id="use3060"
+       transform="matrix(1,0,0,0.58124656,-22.044327,420.97919)"
+       width="500"
+       height="80"
+       style="stroke-width:2.62331111;stroke-miterlimit:4;stroke-dasharray:none" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use3060"
+       id="use3062"
+       transform="translate(44.088654,0)"
+       width="500"
+       height="80"
+       style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none" />
+  </g>
+</svg>

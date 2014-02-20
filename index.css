@@ -1,0 +1,107 @@
+body {
+	background-color: black;
+	overflow: hidden;
+	-moz-perspective: 1200px;
+	-moz-transform: translate3d(0,0,0);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+#scene {
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	-moz-transform-style: preserve-3d;
+}
+img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+#scale {
+	-moz-transform: translateX(-50%) translate3d(-30px,630px,10px) rotateX(60deg);
+	opacity: 1;
+	-moz-transition: opacity 1s, -moz-transform 1s;
+}
+#scene.notclose #scale {
+	-moz-transform: translateX(-50%) translate3d(-30px,680px,60px) rotateX(90deg);
+	opacity: 0;
+}
+#title {
+	width: 700px;
+	-moz-transform: translateX(-50%) translate3d(-30px,240px,100px) rotateX(-15deg);
+	z-index: 1000;
+	opacity: 1;
+	-moz-transition: opacity 1s, -moz-transform 1s;
+	position: absolute;
+}
+#scene.notclose #title {
+	-moz-transform: translateX(-50%) translate3d(-30px,190px,150px) rotateX(0deg);
+	opacity: 0;
+}
+#lifecycle {
+	-moz-transform: translate(-50%,-50%) translate3d(-600px,300px,-300px) rotateY(30deg);
+}
+#lifecycle.focused {
+	-moz-transform: translate(-50%,-50%) translate3d(-600px,300px,-200px) rotateY(20deg);
+}
+#originspread {
+	-moz-transform: translate(-50%,-50%) translate3d(600px,300px,-300px) rotateY(-30deg);
+}
+#originspread.focused {
+	-moz-transform: translate(-50%,-50%) translate3d(600px,300px,-200px) rotateY(-20deg);
+}
+#foreground {
+	-moz-transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
+	-moz-transition: opacity 1s;
+	opacity: 1;
+}
+#scene.defocusfront #foreground {
+	opacity: 0;
+}
+#foregroundb {
+	-moz-transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
+}
+#currentstatus {
+	-moz-transform: translate(-50%,-50%) translate3d(-600px,-300px,-300px) rotateY(40deg);
+}
+#currentstatus.focused {
+	-moz-transform: translate(-50%,-50%) translate3d(-600px,-300px,-200px) rotateY(20deg);
+}
+#importance {
+	-moz-transform: translate(-50%,-50%) translate3d(600px,-300px,-300px) rotateY(-40deg);
+}
+#importance.focused {
+	-moz-transform: translate(-50%,-50%) translate3d(600px,-300px,-200px) rotateY(-20deg);
+}
+#backdrop {
+	width:4600px;
+	-moz-transform: translate(-50%,-50%) translate3d(0,0,-1000px);
+}
+#backdropb {
+	width:4600px;
+	-moz-transform: translate(-50%,-50%) translate3d(0,0,-1000px);
+	-moz-transition: opacity 1s;
+	opacity: 1;
+}
+#scene.focusback #backdropb {
+	opacity: 0;
+}
+
+.info {
+	width: 700px;
+	-moz-transition: opacity 1s, -moz-transform 1s;
+	opacity: 0.2
+}
+.info.focused {
+	opacity: 0.8;
+}
+#firefox{
+	color:#555555;
+	font-size:32pt;
+	font-family: sans-serif;
+}
