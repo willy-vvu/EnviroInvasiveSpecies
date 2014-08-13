@@ -1,7 +1,11 @@
 body {
 	background-color: black;
 	overflow: hidden;
+	perspective: 1200px;
+	-webkit-perspective: 1200px;
 	-moz-perspective: 1200px;
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
 	position: absolute;
 	left: 0;
@@ -15,6 +19,8 @@ body {
 	right: 0;
 	bottom: 0;
 	position: absolute;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 }
 img {
@@ -23,40 +29,64 @@ img {
 	top: 50%;
 }
 #scale {
+	transform: translateX(-50%) translate3d(-30px,630px,10px) rotateX(60deg);
+	-webkit-transform: translateX(-50%) translate3d(-30px,630px,10px) rotateX(60deg);
 	-moz-transform: translateX(-50%) translate3d(-30px,630px,10px) rotateX(60deg);
 	opacity: 1;
+	transition: opacity 1s, transform 1s;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
 	-moz-transition: opacity 1s, -moz-transform 1s;
 }
 #scene.notclose #scale {
+	transform: translateX(-50%) translate3d(-30px,680px,60px) rotateX(90deg);
+	-webkit-transform: translateX(-50%) translate3d(-30px,680px,60px) rotateX(90deg);
 	-moz-transform: translateX(-50%) translate3d(-30px,680px,60px) rotateX(90deg);
 	opacity: 0;
 }
 #title {
 	width: 700px;
+	transform: translateX(-50%) translate3d(-30px,240px,100px) rotateX(-15deg);
+	-webkit-transform: translateX(-50%) translate3d(-30px,240px,100px) rotateX(-15deg);
 	-moz-transform: translateX(-50%) translate3d(-30px,240px,100px) rotateX(-15deg);
 	z-index: 1000;
 	opacity: 1;
+	transition: opacity 1s, transform 1s;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
 	-moz-transition: opacity 1s, -moz-transform 1s;
 	position: absolute;
 }
 #scene.notclose #title {
+	transform: translateX(-50%) translate3d(-30px,190px,150px) rotateX(0deg);
+	-webkit-transform: translateX(-50%) translate3d(-30px,190px,150px) rotateX(0deg);
 	-moz-transform: translateX(-50%) translate3d(-30px,190px,150px) rotateX(0deg);
 	opacity: 0;
 }
 #lifecycle {
+	transform: translate(-50%,-50%) translate3d(-600px,300px,-300px) rotateY(30deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(-600px,300px,-300px) rotateY(30deg);
 	-moz-transform: translate(-50%,-50%) translate3d(-600px,300px,-300px) rotateY(30deg);
 }
 #lifecycle.focused {
+	transform: translate(-50%,-50%) translate3d(-600px,300px,-200px) rotateY(20deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(-600px,300px,-200px) rotateY(20deg);
 	-moz-transform: translate(-50%,-50%) translate3d(-600px,300px,-200px) rotateY(20deg);
 }
 #originspread {
+	transform: translate(-50%,-50%) translate3d(600px,300px,-300px) rotateY(-30deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(600px,300px,-300px) rotateY(-30deg);
 	-moz-transform: translate(-50%,-50%) translate3d(600px,300px,-300px) rotateY(-30deg);
 }
 #originspread.focused {
+	transform: translate(-50%,-50%) translate3d(600px,300px,-200px) rotateY(-20deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(600px,300px,-200px) rotateY(-20deg);
 	-moz-transform: translate(-50%,-50%) translate3d(600px,300px,-200px) rotateY(-20deg);
 }
 #foreground {
+	transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
+	-webkit-transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
 	-moz-transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
 	opacity: 1;
 }
@@ -64,27 +94,43 @@ img {
 	opacity: 0;
 }
 #foregroundb {
+	transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
+	-webkit-transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
 	-moz-transform: translate(-50%) translate3d(0,400px,0px) rotateX(0deg);
 }
 #currentstatus {
+	transform: translate(-50%,-50%) translate3d(-600px,-300px,-300px) rotateY(40deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(-600px,-300px,-300px) rotateY(40deg);
 	-moz-transform: translate(-50%,-50%) translate3d(-600px,-300px,-300px) rotateY(40deg);
 }
 #currentstatus.focused {
+	transform: translate(-50%,-50%) translate3d(-600px,-300px,-200px) rotateY(20deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(-600px,-300px,-200px) rotateY(20deg);
 	-moz-transform: translate(-50%,-50%) translate3d(-600px,-300px,-200px) rotateY(20deg);
 }
 #importance {
+	transform: translate(-50%,-50%) translate3d(600px,-300px,-300px) rotateY(-40deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(600px,-300px,-300px) rotateY(-40deg);
 	-moz-transform: translate(-50%,-50%) translate3d(600px,-300px,-300px) rotateY(-40deg);
 }
 #importance.focused {
+	transform: translate(-50%,-50%) translate3d(600px,-300px,-200px) rotateY(-20deg);
+	-webkit-transform: translate(-50%,-50%) translate3d(600px,-300px,-200px) rotateY(-20deg);
 	-moz-transform: translate(-50%,-50%) translate3d(600px,-300px,-200px) rotateY(-20deg);
 }
 #backdrop {
 	width:4600px;
+	transform: translate(-50%,-50%) translate3d(0,0,-1000px);
+	-webkit-transform: translate(-50%,-50%) translate3d(0,0,-1000px);
 	-moz-transform: translate(-50%,-50%) translate3d(0,0,-1000px);
 }
 #backdropb {
 	width:4600px;
+	transform: translate(-50%,-50%) translate3d(0,0,-1000px);
+	-webkit-transform: translate(-50%,-50%) translate3d(0,0,-1000px);
 	-moz-transform: translate(-50%,-50%) translate3d(0,0,-1000px);
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
 	opacity: 1;
 }
@@ -94,6 +140,8 @@ img {
 
 .info {
 	width: 700px;
+	transition: opacity 1s, transform 1s;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
 	-moz-transition: opacity 1s, -moz-transform 1s;
 	opacity: 0.2
 }

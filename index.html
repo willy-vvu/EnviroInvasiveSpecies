@@ -126,11 +126,19 @@
 						scene.classList.add("notclose");
 					}
 				}
-				window.mozRequestAnimationFrame(updateFrame);
+				if(window.requestAnimationFrame){
+					window.requestAnimationFrame(updateFrame);
+				}
+				else if(window.mozRequestAnimationFrame){
+					window.mozRequestAnimationFrame(updateFrame);
+				}
+				else{
+					setTimeout(updateFrame,16.666);
+				}
 			}
 
 
-			document.body.onload = function() {
+			window.onload = function() {
 				document.getElementById("firefox").style.display="none";
 				updateFrame();
 			}
